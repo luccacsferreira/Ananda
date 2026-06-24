@@ -9,12 +9,12 @@ export default function Services() {
   const services = [
     {
       title: 'Saúde Nasal e Sinusite',
-      image: 'https://images.unsplash.com/photo-1584515979956-d9f2e66f368b?auto=format&fit=crop&q=80&w=800',
+      image: 'https://images.unsplash.com/photo-1606902965551-dce093cda6e7?auto=format&fit=crop&q=80&w=800',
       desc: 'Tratamentos para rinite, sinusite, desvio de septo e dificuldades respiratórias.',
     },
     {
       title: 'Zumbido e Audição',
-      image: 'https://images.unsplash.com/photo-1516843343469-633096bfe2b4?auto=format&fit=crop&q=80&w=800',
+      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800',
       desc: 'Investigação e cuidados para perda auditiva, zumbido e lavagem de ouvido.',
     },
     {
@@ -80,8 +80,8 @@ export default function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div key={index} className="bg-[#E7E2E5] rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between">
-              <div className="rounded-[1.5rem] overflow-hidden bg-white mb-6">
+            <div key={index} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
+              <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
                 <img 
                   src={service.image} 
                   alt={service.title} 
@@ -93,7 +93,7 @@ export default function Services() {
                   <h4 className="text-xl font-serif font-semibold text-brand-primary mb-3">
                     {service.title}
                   </h4>
-                  <p className="text-gray-600 text-sm font-light mb-6">
+                  <p className="text-brand-secondary text-sm font-medium mb-6">
                     {service.desc}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function Services() {
                   href={getWhatsAppLink(service.title)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-white text-brand-secondary py-3 px-8 rounded-full font-medium shadow-sm hover:shadow-md transition-shadow text-sm tracking-wide"
+                  className="inline-block bg-brand-secondary text-white py-3 px-8 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-brand-secondary/90 transition-all duration-300 text-sm tracking-wide"
                 >
                   saiba mais
                 </a>

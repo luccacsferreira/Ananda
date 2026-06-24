@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "Dra. Ananda Carvalho Landing Page",
+  "description": "Professional landing page for Dra. Ananda Carvalho, an Otorhinolaryngologist based in São Paulo, SP.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

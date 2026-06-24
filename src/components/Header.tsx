@@ -24,7 +24,7 @@ export default function Header() {
         
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 relative z-10 group" aria-label="Início" draggable="false">
-          <img src="/Logo_Ananda_No_Bg.png" alt="Dra. Ananda Carvalho" className="h-16 md:h-20 w-auto object-contain" draggable="false" />
+          <img src="/favicon_ananda_purple.png" alt="Dra. Ananda Carvalho" className="h-16 md:h-20 w-auto object-contain" draggable="false" />
         </a>
 
         {/* Desktop Nav */}
@@ -43,7 +43,7 @@ export default function Header() {
             target="_blank"
             rel="noopener noreferrer"
             draggable="false"
-            className="bg-brand-secondary hover:bg-brand-primary text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium transition-colors shadow-sm hover:shadow-md"
+            className="bg-brand-secondary hover:bg-brand-secondary/90 text-white px-6 py-2.5 rounded-full text-xs uppercase tracking-wider font-medium transition-colors shadow-sm hover:shadow-md"
           >
             Agendamentos
           </a>
@@ -69,7 +69,7 @@ export default function Header() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-4 bg-brand-secondary text-white px-8 py-4 rounded-full text-lg font-medium tracking-wide shadow-md"
+              className="mt-4 bg-brand-secondary hover:bg-brand-secondary/90 text-white px-8 py-4 rounded-full text-lg font-medium tracking-wide shadow-md"
             >
               Agendamentos
             </a>

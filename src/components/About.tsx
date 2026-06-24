@@ -81,6 +81,14 @@ export default function About() {
                   Fellowship em Otorrinolaringologia Pediátrica pela UNIFESP <span className="text-gray-500 font-light">(2020 - 2021)</span>.
                 </p>
               </li>
+              <li className="flex items-start gap-4">
+                <div className="mt-1 bg-brand-light p-2 rounded-full text-brand-secondary shrink-0">
+                  <FileText className="w-4 h-4" />
+                </div>
+                <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                  Título de especialista pela Associação Brasileira de Otorrinolaringologia (ABORL).
+                </p>
+              </li>
             </ul>
           </div>
 

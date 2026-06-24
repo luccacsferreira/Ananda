@@ -27,7 +27,7 @@ export default function Location() {
         {/* Location Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24 relative">
           
-          <div className="bg-brand-light/40 rounded-[2rem] p-8 md:p-12 w-full max-w-md text-center border border-brand-accent/30 relative">
+          <div className="bg-[#f7f4f6] rounded-[2rem] p-8 md:p-12 w-full max-w-md text-center border border-brand-accent/30 relative">
             <HouseDrawn className="w-32 h-32 text-brand-secondary mx-auto mb-6" />
             <h4 className="text-2xl font-serif text-brand-secondary font-bold mb-4">
               Consultório em São Paulo

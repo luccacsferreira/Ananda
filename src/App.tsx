@@ -16,9 +16,10 @@ import FloatingWhatsApp from './components/FloatingWhatsApp';
 export default function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05, // Very smooth deceleration (inertia)
+      duration: 1.5,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 1.2,
+      wheelMultiplier: 1,
       touchMultiplier: 2,
     });
 
