@@ -6,17 +6,17 @@ export default function Hero() {
   const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 
   return (
-    <section className="relative w-full min-h-[90vh] bg-[#F5F1F3] overflow-hidden flex items-center justify-center pt-48 md:pt-64 pb-16">
+    <section className="relative w-full min-h-[90vh] bg-[#F5F1F3] overflow-hidden flex pt-48 md:pt-64">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
         <div className="absolute -top-20 -right-20 w-96 h-96 bg-[#A88FAC] rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
         <div className="absolute top-40 -left-20 w-72 h-72 bg-[#E0CED8] rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
       </div>
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center gap-12 max-w-6xl">
+      <div className="container mx-auto px-6 lg:px-12 relative z-10 flex flex-col md:flex-row items-center md:items-end gap-12 max-w-6xl">
         
         {/* Left Content */}
-        <div className="flex-1 text-center md:text-left space-y-8">
+        <div className="flex-1 text-center md:text-left space-y-8 pb-16 md:pb-32 z-10">
           <div className="relative inline-block">
             <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-brand-primary leading-tight">
               <span className="block text-3xl md:text-4xl lg:text-5xl font-normal text-brand-secondary mb-2">Dra. Ananda</span>
@@ -50,11 +50,11 @@ export default function Hero() {
         </div>
 
         {/* Right Photo */}
-        <div className="flex-1 relative w-full max-w-md mx-auto flex items-center justify-center">
+        <div className="flex-1 relative w-full max-w-lg mx-auto flex items-end justify-center self-end md:-mb-1">
           <img 
-            src="/no_bg_close.png" 
+            src="/landingpage_ananda_no_bg.png" 
             alt="Dra. Ananda Carvalho"
-            className="w-full h-auto max-h-[500px] object-contain object-bottom drop-shadow-[0_20px_35px_rgba(168,143,172,0.2)]"
+            className="w-full h-auto max-h-[60vh] md:max-h-[85vh] object-contain object-bottom drop-shadow-[0_20px_35px_rgba(168,143,172,0.2)]"
           />
         </div>
 

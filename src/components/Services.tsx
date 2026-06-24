@@ -24,9 +24,50 @@ export default function Services() {
     }
   ];
 
+  const pairConfigs = [
+    { h: 'h-[70px] md:h-[110px]', scaleX: 'scale-x-100' },
+    { h: 'h-[100px] md:h-[160px]', scaleX: 'scale-x-[-1.05]' },
+    { h: 'h-[60px] md:h-[90px]', scaleX: 'scale-x-[1.1]' },
+    { h: 'h-[120px] md:h-[180px]', scaleX: 'scale-x-[-1]' },
+    { h: 'h-[80px] md:h-[130px]', scaleX: 'scale-x-[1.05]' },
+    { h: 'h-[110px] md:h-[150px]', scaleX: 'scale-x-[1.15]' },
+    { h: 'h-[65px] md:h-[100px]', scaleX: 'scale-x-[-1.1]' },
+    { h: 'h-[95px] md:h-[140px]', scaleX: 'scale-x-100' },
+    { h: 'h-[130px] md:h-[190px]', scaleX: 'scale-x-[-1.05]' },
+    { h: 'h-[85px] md:h-[120px]', scaleX: 'scale-x-[1.1]' },
+  ];
+
   return (
-    <section id="servicos" className="py-24 bg-brand-light relative">
-      <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
+    <section id="servicos" className="py-24 bg-[#EBE4E7] relative overflow-hidden">
+      {/* Flowing SVG Wallpaper */}
+      <div className="absolute inset-0 w-full h-full z-0 flex flex-col opacity-50 mix-blend-overlay">
+        {pairConfigs.map((pair, index) => (
+          <div key={index} className="contents">
+            {/* Top half: flat top, wavy bottom */}
+            <svg 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none" 
+              className={`w-full flex-none ${index === 0 ? '' : '-mt-[1px]'} ${pair.h} ${pair.scaleX}`} 
+            >
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#FFFFFF"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-23.89,5.26,1.26,10.6,3.6,15.54,6.48V0Z" opacity=".5" fill="#FFFFFF"></path>
+              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FFFFFF"></path>
+            </svg>
+            {/* Bottom half: wavy top, flat bottom */}
+            <svg 
+              viewBox="0 0 1200 120" 
+              preserveAspectRatio="none" 
+              className={`w-full flex-none scale-y-[-1] -mt-[1px] ${pair.h} ${pair.scaleX}`} 
+            >
+              <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#FFFFFF"></path>
+              <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-23.89,5.26,1.26,10.6,3.6,15.54,6.48V0Z" opacity=".5" fill="#FFFFFF"></path>
+              <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FFFFFF"></path>
+            </svg>
+          </div>
+        ))}
+      </div>
+
+      <div className="container mx-auto px-6 lg:px-12 max-w-6xl relative z-10">
         <div className="text-center mb-16 relative z-10">
           <h2 className="text-brand-secondary font-sans uppercase tracking-widest text-sm font-semibold mb-2">
             Principais
@@ -68,15 +109,6 @@ export default function Services() {
             </div>
           ))}
         </div>
-      </div>
-      
-      {/* Decorative SVG brush stroke at bottom (simulated with CSS curve) */}
-      <div className="absolute bottom-0 w-full overflow-hidden leading-[0]">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="relative block w-full h-[50px] md:h-[100px]" >
-          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="#FFFFFF"></path>
-          <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-23.89,5.26,1.26,10.6,3.6,15.54,6.48V0Z" opacity=".5" fill="#FFFFFF"></path>
-          <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="#FFFFFF"></path>
-        </svg>
       </div>
     </section>
   );

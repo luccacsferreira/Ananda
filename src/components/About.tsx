@@ -9,25 +9,33 @@ export default function About() {
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl relative z-10 flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Photo */}
-        <div className="w-full lg:w-1/2 relative mb-12 md:mb-0">
-          <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-white z-10 w-full md:w-[85%]">
+        <div className="w-full lg:w-1/2 relative mb-16 md:mb-0 mt-8">
+          <div className="relative rounded-[2rem] overflow-hidden shadow-xl border-4 border-white z-10 w-full md:w-[75%] ml-auto md:mr-12">
             <img 
-              src="/Ananda_Consulta.jpeg" 
-              alt="Dra. Ananda atendendo paciente"
+              src="/ananda_blue_smile.jpeg" 
+              alt="Dra. Ananda"
               className="w-full h-[400px] object-cover object-center"
             />
           </div>
           
-          <div className="absolute -bottom-16 right-0 md:right-4 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-20 w-3/4 md:w-[65%]">
+          <div className="absolute -bottom-16 left-0 md:left-4 rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white z-20 w-[65%] md:w-[55%]">
              <img 
               src="/Ananda Congresso.jpeg" 
               alt="Dra. Ananda no Congresso"
-              className="w-full h-[280px] object-cover object-center"
+              className="w-full h-[240px] object-cover object-center"
+            />
+          </div>
+
+          <div className="absolute -top-12 left-8 md:left-12 rounded-[2rem] overflow-hidden shadow-xl border-4 border-white z-20 w-[45%] md:w-[40%]">
+             <img 
+              src="/ananda_smiling_lookaway.jpeg" 
+              alt="Dra. Ananda"
+              className="w-full h-[200px] object-cover object-center"
             />
           </div>
 
           {/* Decorative frame elements behind picture */}
-          <div className="absolute -bottom-6 -left-6 w-full md:w-[85%] h-[400px] rounded-[2rem] bg-brand-light z-0"></div>
+          <div className="absolute -bottom-6 right-0 md:right-8 w-full md:w-[75%] h-[400px] rounded-[2rem] bg-brand-light z-0"></div>
         </div>
 
         {/* Right Content */}
