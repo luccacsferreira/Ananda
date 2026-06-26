@@ -43,7 +43,7 @@ export default function Hero() {
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center w-full md:w-auto gap-3 bg-brand-secondary hover:bg-brand-secondary/90 transition-colors duration-300 text-white font-medium py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transform"
+              className="inline-flex items-center justify-center w-full md:w-auto gap-3 bg-brand-secondary hover:bg-brand-secondary/90 transition-colors duration-300 text-white font-medium py-4 px-8 rounded-full shadow-lg hover:shadow-xl"
             >
               <Phone className="w-5 h-5" />
               AGENDAR CONSULTA

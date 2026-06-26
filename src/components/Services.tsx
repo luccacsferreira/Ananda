@@ -6,21 +6,55 @@ export default function Services() {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${service}.`)}`;
   };
 
-  const services = [
+  const row1Services = [
     {
-      title: 'Saúde Nasal e Sinusite',
-      image: 'https://images.unsplash.com/photo-1606902965551-dce093cda6e7?auto=format&fit=crop&q=80&w=800',
-      desc: 'Tratamentos para rinite, sinusite, desvio de septo e dificuldades respiratórias.',
-    },
-    {
-      title: 'Zumbido e Audição',
-      image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=800',
-      desc: 'Investigação e cuidados para perda auditiva, zumbido e lavagem de ouvido.',
+      title: 'Saúde dos Ouvidos',
+      plainTitle: 'Saúde dos Ouvidos',
+      image: '/Saúde_dos_ouvidos.jpeg',
+      desc: 'Avaliação das infecções de ouvido, coceira e dificuldades auditivas.',
     },
     {
       title: 'Garganta e Voz',
-      image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=800',
-      desc: 'Avaliação de amígdalas, rouquidão, faringite e ronco.',
+      plainTitle: 'Garganta e Voz',
+      image: '/Garganta_e_voz.jpeg',
+      desc: 'Avaliação das amígdalas, rouquidão, faringites e laringites de repetição.',
+    },
+    {
+      title: 'Avaliação Auditiva',
+      plainTitle: 'Avaliação Auditiva',
+      image: '/Avaliação_Auditiva.jpeg',
+      desc: 'Investigação das perdas auditivas e zumbido.',
+    },
+    {
+      title: 'Remoção de Cera',
+      plainTitle: 'Remoção de Cera',
+      image: '/Remoção_de_cera.jpg',
+      desc: 'Realização de Lavagem dos ouvidos.',
+    }
+  ];
+
+  const row2Services = [
+    {
+      title: 'Saúde Nasal e Seios da Face',
+      plainTitle: 'Saúde Nasal e Seios da Face',
+      image: '/Saúde_nasal_e_Seios_da_Face.jpeg',
+      desc: 'Tratamento da rinite, sinusite, desvio de septo e dificuldades respiratórias.',
+    },
+    {
+      title: 'Roncos e Respiração Oral',
+      plainTitle: 'Roncos e Respiração Oral',
+      image: '/Roncos_e_Respiração_oral.jpeg',
+      desc: 'Investigação dos roncos e apneia em crianças e nos adultos.',
+    },
+    {
+      title: (
+        <>
+          Nasofibrofaringo<br />laringoscopia
+        </>
+      ),
+      plainTitle: 'Nasofibrofaringolaringoscopia',
+      image: '/Nasofibrofaringolaringoscopia.jpg',
+      desc: 'Exame rápido, realizado em crianças e adulto para avaliação das cavidades nasais, faringe e laringe.',
     }
   ];
 
@@ -78,36 +112,70 @@ export default function Services() {
           <NoseDrawn className="absolute -bottom-10 right-10 md:right-20 w-16 h-16 text-brand-accent opacity-50" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:-translate-y-2 flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
-              <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-56 object-cover opacity-90 transition-opacity hover:opacity-100"
-                />
-              </div>
-              <div className="text-center px-4 flex-grow flex flex-col justify-between">
-                <div>
-                  <h4 className="text-xl font-serif font-semibold text-brand-primary mb-3">
-                    {service.title}
-                  </h4>
-                  <p className="text-brand-secondary text-sm font-medium mb-6">
-                    {service.desc}
-                  </p>
+        <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {row1Services.map((service, index) => (
+              <div key={`row1-${index}`} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
+                <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
+                  <img 
+                    src={service.image} 
+                    alt={service.plainTitle} 
+                    className="w-full h-56 object-cover opacity-90 transition-opacity hover:opacity-100"
+                  />
                 </div>
-                <a 
-                  href={getWhatsAppLink(service.title)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block bg-brand-secondary text-white py-3 px-8 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-brand-secondary/90 transition-all duration-300 text-sm tracking-wide"
-                >
-                  saiba mais
-                </a>
+                <div className="text-center px-4 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h4 className="text-xl font-serif font-semibold text-brand-primary mb-3">
+                      {service.title}
+                    </h4>
+                    <p className="text-brand-secondary text-sm font-medium mb-6">
+                      {service.desc}
+                    </p>
+                  </div>
+                  <a 
+                    href={getWhatsAppLink(service.plainTitle)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-brand-secondary text-white py-3 px-8 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-brand-secondary/90 transition-all duration-300 text-sm tracking-wide"
+                  >
+                    saiba mais
+                  </a>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto w-full">
+            {row2Services.map((service, index) => (
+              <div key={`row2-${index}`} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
+                <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
+                  <img 
+                    src={service.image} 
+                    alt={service.plainTitle} 
+                    className="w-full h-56 object-cover opacity-90 transition-opacity hover:opacity-100"
+                  />
+                </div>
+                <div className="text-center px-4 flex-grow flex flex-col justify-between">
+                  <div>
+                    <h4 className="text-xl font-serif font-semibold text-brand-primary mb-3">
+                      {service.title}
+                    </h4>
+                    <p className="text-brand-secondary text-sm font-medium mb-6">
+                      {service.desc}
+                    </p>
+                  </div>
+                  <a 
+                    href={getWhatsAppLink(service.plainTitle)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-brand-secondary text-white py-3 px-8 rounded-full font-medium shadow-sm hover:shadow-md hover:bg-brand-secondary/90 transition-all duration-300 text-sm tracking-wide"
+                  >
+                    saiba mais
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
