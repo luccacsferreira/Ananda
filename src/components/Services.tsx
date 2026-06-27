@@ -54,7 +54,7 @@ export default function Services() {
         </>
       ),
       plainTitle: 'Nasofibrofaringolaringoscopia',
-      image: '/Nasofibrofaringolaringoscopia.jpg',
+      image: '/Nasofibrofaringolaringoscopia_new.jpg',
       desc: 'Exame rápido, realizado em crianças e adulto para avaliação das cavidades nasais, faringe e laringe.',
     }
   ];

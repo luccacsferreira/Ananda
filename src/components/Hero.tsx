@@ -89,7 +89,7 @@ export default function Hero() {
           className="flex-1 relative w-full mx-auto flex items-end justify-center md:justify-end self-end -mb-2 md:-mb-1 mt-8 md:mt-0"
         >
           <img 
-            src="/landingpage_ananda_no_bg.png" 
+            src="/landingpage_ananda_no_bg_new.png" 
             alt="Dra. Ananda Carvalho"
             className="w-full max-w-none h-auto object-contain object-bottom drop-shadow-[0_20px_35px_rgba(168,143,172,0.25)] origin-bottom scale-[0.94] sm:scale-[1.0] md:scale-[1.05] lg:scale-[1.2] md:translate-x-0 lg:translate-x-2"
           />

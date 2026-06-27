@@ -52,7 +52,7 @@ export default function Location() {
             {/* Map */}
             <div className="rounded-2xl overflow-hidden shadow-inner border border-brand-accent/20 h-80 md:h-[400px] w-full relative bg-gray-100 flex items-center justify-center">
               <iframe 
-                src="https://maps.google.com/maps?q=Av.%20Ant%C3%A1rtica%2C%20Perdizes%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005003-020&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Otorrino%20Dra.%20Ananda%20Carvalho%2C%20Av.%20Ant%C3%A1rtica%2C%20Perdizes%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005003-020&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
