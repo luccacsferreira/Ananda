@@ -35,6 +35,9 @@ export default function Header() {
           <a href="#servicos" className="text-brand-primary/80 hover:text-brand-primary text-xs uppercase tracking-[0.15em] font-medium transition-colors" draggable="false">
             Serviços
           </a>
+          <a href="#avaliacoes" className="text-brand-primary/80 hover:text-brand-primary text-xs uppercase tracking-[0.15em] font-medium transition-colors" draggable="false">
+            Avaliações
+          </a>
           <a href="#localizacao" className="text-brand-primary/80 hover:text-brand-primary text-xs uppercase tracking-[0.15em] font-medium transition-colors" draggable="false">
             Localização
           </a>
@@ -63,6 +66,7 @@ export default function Header() {
           <div className="flex flex-col items-center gap-8">
             <a href="#contato" onClick={() => setMobileMenuOpen(false)} className="text-brand-primary text-2xl font-serif transition-colors">Contato</a>
             <a href="#servicos" onClick={() => setMobileMenuOpen(false)} className="text-brand-primary text-2xl font-serif transition-colors">Serviços</a>
+            <a href="#avaliacoes" onClick={() => setMobileMenuOpen(false)} className="text-brand-primary text-2xl font-serif transition-colors">Avaliações</a>
             <a href="#localizacao" onClick={() => setMobileMenuOpen(false)} className="text-brand-primary text-2xl font-serif transition-colors">Localização</a>
             <a 
               href={getWhatsAppLink()}

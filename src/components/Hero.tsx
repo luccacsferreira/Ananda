@@ -1,4 +1,5 @@
 import { Phone } from 'lucide-react';
+import { motion } from 'motion/react';
 
 export default function Hero() {
   const whatsappNumber = "+5511972562728";
@@ -22,7 +23,13 @@ export default function Hero() {
         
         {/* Left Content */}
         <div className="flex-1 text-center md:text-left space-y-4 md:space-y-8 pb-0 md:pb-32 z-10 w-full pt-4 md:pt-0 flex flex-col items-center md:items-start">
-          <div className="relative inline-block text-center md:text-left">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6 }}
+            className="relative inline-block text-center md:text-left"
+          >
             <h1 className="font-serif leading-none flex flex-col gap-1">
               <span className="block text-2xl md:text-3xl lg:text-4xl font-normal text-brand-secondary mb-1">Dra.</span>
               <span className="block text-6xl md:text-7xl lg:text-[5.5rem] font-bold text-brand-primary tracking-tight">Ananda</span>
@@ -31,14 +38,26 @@ export default function Hero() {
             <p className="mt-4 md:mt-6 text-base md:text-2xl font-sans tracking-widest text-gray-500 uppercase font-medium">
               Otorrinolaringologista
             </p>
-          </div>
+          </motion.div>
 
-          <p className="text-sm md:text-lg text-gray-700 max-w-lg mx-auto md:mx-0 font-light leading-relaxed px-4 md:px-0">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-sm md:text-lg text-gray-700 max-w-lg mx-auto md:mx-0 font-light leading-relaxed px-4 md:px-0"
+          >
             Atendimento focado na saúde integral do seu nariz, ouvido e garganta. 
             Cuidado especializado, com atenção, acolhimento e suporte completo para você.
-          </p>
+          </motion.p>
 
-          <div className="pt-0 md:pt-4 w-full md:w-auto px-4 md:px-0 z-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="pt-0 md:pt-4 w-full md:w-auto px-4 md:px-0 z-20"
+          >
             <a 
               href={link}
               target="_blank"
@@ -48,21 +67,33 @@ export default function Hero() {
               <Phone className="w-5 h-5" />
               AGENDAR CONSULTA
             </a>
-          </div>
+          </motion.div>
           
-          <p className="text-xs md:text-sm text-[#364153] font-light mt-2 hidden md:block">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="text-xs md:text-sm text-[#364153] font-light mt-2 hidden md:block"
+          >
             Atendimento exclusivo em São Paulo, SP
-          </p>
+          </motion.p>
         </div>
 
         {/* Right Photo */}
-        <div className="flex-1 relative w-full mx-auto flex items-end justify-center md:justify-end self-end -mb-2 md:-mb-1 mt-8 md:mt-0">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="flex-1 relative w-full mx-auto flex items-end justify-center md:justify-end self-end -mb-2 md:-mb-1 mt-8 md:mt-0"
+        >
           <img 
             src="/landingpage_ananda_no_bg.png" 
             alt="Dra. Ananda Carvalho"
-            className="w-full max-w-none h-auto object-contain object-bottom drop-shadow-[0_20px_35px_rgba(168,143,172,0.25)] origin-bottom scale-[0.9] sm:scale-95 md:scale-100 lg:scale-[1.15] md:translate-x-0 lg:translate-x-2"
+            className="w-full max-w-none h-auto object-contain object-bottom drop-shadow-[0_20px_35px_rgba(168,143,172,0.25)] origin-bottom scale-[0.94] sm:scale-[1.0] md:scale-[1.05] lg:scale-[1.2] md:translate-x-0 lg:translate-x-2"
           />
-        </div>
+        </motion.div>
 
       </div>
     </section>

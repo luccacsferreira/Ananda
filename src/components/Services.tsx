@@ -1,4 +1,5 @@
 import { EarDrawn, NoseDrawn } from './Icons';
+import { motion } from 'motion/react';
 
 export default function Services() {
   const whatsappNumber = "+5511972562728";
@@ -102,7 +103,13 @@ export default function Services() {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl relative z-10">
-        <div className="text-center mb-16 relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16 relative z-10"
+        >
           <h2 className="text-brand-secondary font-sans uppercase tracking-widest text-sm font-semibold mb-2">
             Principais
           </h2>
@@ -110,12 +117,19 @@ export default function Services() {
           
           <EarDrawn className="absolute -top-10 left-10 md:left-20 w-16 h-16 text-brand-accent opacity-50" />
           <NoseDrawn className="absolute -bottom-10 right-10 md:right-20 w-16 h-16 text-brand-accent opacity-50" />
-        </div>
+        </motion.div>
 
         <div className="flex flex-col gap-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {row1Services.map((service, index) => (
-              <div key={`row1-${index}`} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
+              <motion.div 
+                key={`row1-${index}`} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]"
+              >
                 <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
                   <img 
                     src={service.image} 
@@ -141,13 +155,19 @@ export default function Services() {
                     saiba mais
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto w-full">
             {row2Services.map((service, index) => (
-              <div key={`row2-${index}`} className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]">
+              <motion.div 
+                key={`row2-${index}`} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-[2rem] p-4 pb-8 transition-transform duration-300 hover:scale-[1.02] flex flex-col justify-between shadow-[0_10px_30px_rgba(168,143,172,0.15)]"
+              >
                 <div className="rounded-[1.5rem] overflow-hidden bg-brand-light mb-6">
                   <img 
                     src={service.image} 
@@ -173,7 +193,7 @@ export default function Services() {
                     saiba mais
                   </a>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>

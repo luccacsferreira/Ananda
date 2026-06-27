@@ -9,6 +9,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
+import Reviews from './components/Reviews';
 import Location from './components/Location';
 import Footer from './components/Footer';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
@@ -58,6 +59,7 @@ export default function App() {
       <Hero />
       <About />
       <Services />
+      <Reviews />
       <Location />
       <Footer />
       <FloatingWhatsApp />
