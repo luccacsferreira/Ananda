@@ -1,7 +1,7 @@
 import { Phone } from 'lucide-react';
 
 export default function FloatingWhatsApp() {
-  const whatsappNumber = "+5511972562728";
+  const whatsappNumber = "+5511910237800";
   return (
     <a
       href={`https://wa.me/${whatsappNumber}`}

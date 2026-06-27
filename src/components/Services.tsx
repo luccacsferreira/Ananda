@@ -2,7 +2,7 @@ import { EarDrawn, NoseDrawn } from './Icons';
 import { motion } from 'motion/react';
 
 export default function Services() {
-  const whatsappNumber = "+5511972562728";
+  const whatsappNumber = "+5511910237800";
   const getWhatsAppLink = (service: string) => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Gostaria de saber mais sobre ${service}.`)}`;
   };

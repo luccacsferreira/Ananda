@@ -54,7 +54,7 @@ const Reviews: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: false, amount: 0.2 }}
-              className="bg-brand-light/30 p-8 rounded-[2.5rem] relative flex flex-col justify-between border border-brand-light"
+              className="bg-[#f7f4f6] p-8 rounded-[2.5rem] relative flex flex-col justify-between border border-brand-light"
             >
               <Quote className="absolute top-6 right-8 text-brand-secondary/20 w-12 h-12" />
               

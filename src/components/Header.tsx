@@ -13,7 +13,7 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const whatsappNumber = "+5511972562728";
+  const whatsappNumber = "+5511910237800";
   const getWhatsAppLink = () => {
     return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Olá! Gostaria de agendar uma consulta com a Dra. Ananda.`)}`;
   };

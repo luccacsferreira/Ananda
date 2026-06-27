@@ -2,7 +2,7 @@ import { Phone } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Hero() {
-  const whatsappNumber = "+5511972562728";
+  const whatsappNumber = "+5511910237800";
   const whatsappMessage = "Olá! Gostaria de agendar uma consulta com a Dra. Ananda.";
   const link = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
 

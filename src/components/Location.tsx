@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export default function Location() {
-  const whatsappNumber = "+5511972562728";
+  const whatsappNumber = "+5511910237800";
   return (
     <section id="localizacao" className="py-24 bg-white relative">
       <div className="container mx-auto px-6 lg:px-12 max-w-6xl">
