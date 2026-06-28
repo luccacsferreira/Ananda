@@ -31,7 +31,7 @@ export default function About() {
 
           <div className="relative rounded-[2.5rem] overflow-hidden z-20 w-[90%] md:w-[85%] shadow-sm">
             <img 
-              src="/ananda_blue_smile.jpeg" 
+              src="/ananda_smiling_lookaway.jpeg" 
               alt="Dra. Ananda"
               className="w-full h-[450px] md:h-[550px] object-cover object-center"
             />
