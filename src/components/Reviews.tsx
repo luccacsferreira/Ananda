@@ -38,6 +38,7 @@ const Reviews: React.FC = () => {
           textQuery: 'Otorrino Dra. Ananda Carvalho Perdizes São Paulo',
           fields: ['reviews', 'displayName', 'id'],
           maxResultCount: 1,
+          language: 'pt-BR',
         });
 
         if (places && places.length > 0 && places[0].reviews && places[0].reviews.length > 0) {
